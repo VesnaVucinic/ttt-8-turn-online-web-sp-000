@@ -19,10 +19,17 @@ def move(board, index, char)
   update_array_at_with(board, index, char)
 end
 
+def position_taken? (board, index)
+  board[index] != " " ||  board[index] != "" || board[index] != nil
+end
+
+
+
+=begin
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
-
+=end
 
 def valid_move?(board, index)
   if position_taken?(board,index) || index < 0 || index > 8
